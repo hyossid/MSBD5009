@@ -11,11 +11,11 @@
 int main(int argc, char **argv) {
     assert(argc > 5 && "Usage: ./cuda <dataset_path> <epsilon> <mu> <num_blocks_per_grid> <num_threads_per_block>");
 
-    std::string file_path = argv[1];
-    float epsilon = std::stof(argv[2]);
-    int mu = std::stoi(argv[3]);
-    int num_blocks_per_grid = std::stoi(argv[4]);
-    int num_threads_per_block = std::stoi(argv[5]);
+    std::string file_path = '../datasets/test1/1.txt'; //argv[1];
+    float epsilon = 0.7; //std::stof(argv[2]);
+    int mu = 3; // std::stoi(argv[3]);
+    int num_blocks_per_grid = 8; //std::stoi(argv[4]);
+    int num_threads_per_block = 512; //std::stoi(argv[5]);
 
     int num_vs, num_es, *nbr_offs = nullptr, *nbrs = nullptr;
     read_file(file_path, num_vs, num_es, nbr_offs, nbrs);   // 다시 
